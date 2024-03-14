@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zN9-VL-Flm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2AM-oV-GGM">
+            <objects>
+                <viewController id="zN9-VL-Flm" customClass="ViewController" customModule="TwillioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BFL-L3-Jn8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-Sq-JoK">
+                                <rect key="frame" x="15" y="91" width="363" height="48"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="lCN-kV-62Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Send Message"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="zN9-VL-Flm" eventType="touchUpInside" id="Gq8-Ic-AcL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHK-tt-Aic">
+                                <rect key="frame" x="15" y="171" width="363" height="635"/>
+                                <string key="text">Waiting for resposne....Waiting for resposne....Waiting for resposne....Waiting for resposne....Waiting for resposne....Waiting for resposne....</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="biv-mv-dpB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="biv-mv-dpB" firstAttribute="trailing" secondItem="OHK-tt-Aic" secondAttribute="trailing" constant="15" id="8BE-XH-rdA"/>
+                            <constraint firstItem="OHK-tt-Aic" firstAttribute="leading" secondItem="biv-mv-dpB" secondAttribute="leading" constant="15" id="9kK-Sy-4sU"/>
+                            <constraint firstItem="PEr-Sq-JoK" firstAttribute="top" secondItem="biv-mv-dpB" secondAttribute="top" constant="32" id="CL6-GV-cR3"/>
+                            <constraint firstItem="OHK-tt-Aic" firstAttribute="top" secondItem="PEr-Sq-JoK" secondAttribute="bottom" constant="32" id="Fs5-lQ-AF3"/>
+                            <constraint firstItem="biv-mv-dpB" firstAttribute="bottom" secondItem="OHK-tt-Aic" secondAttribute="bottom" constant="12" id="Mhg-10-IN0"/>
+                            <constraint firstItem="PEr-Sq-JoK" firstAttribute="leading" secondItem="biv-mv-dpB" secondAttribute="leading" constant="15" id="N0z-fb-Kyp"/>
+                            <constraint firstItem="biv-mv-dpB" firstAttribute="trailing" secondItem="PEr-Sq-JoK" secondAttribute="trailing" constant="15" id="vlF-Dn-LhI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLbl" destination="OHK-tt-Aic" id="oHB-4v-B9p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAQ-Yh-Lqf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
